@@ -1,80 +1,93 @@
-# Academic Project Page Template
+# Towards Real-World Ultrasound Understanding
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+**Large Vision-Language Models from Multi-Image Examinations with Long-Form Reports**
 
-A clean, responsive template for academic project pages.
+This repository contains the project page for our work on real-world ultrasound understanding with large vision-language models (LVLMs).
 
+## Overview
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+Large vision-language models have achieved strong performance across many medical imaging tasks, but ultrasound remains challenging because of its high variability, operator dependence, multi-organ coverage, and examination-level clinical workflow. In this work, we study what is truly needed to enable practical ultrasound understanding.
 
+Instead of relying on complex model architectures or task-specific training pipelines, we show that two factors are especially important:
 
+1. **Data scale**: training on a large number of real-world ultrasound examinations.
+2. **Clinically faithful data alignment**: organizing data at the examination level, where multiple ultrasound images are aligned with their corresponding long-form clinical reports.
 
-## Start using the template
-To start using the template click on `Use this Template`.
+We construct a large-scale ultrasound dataset consisting of **1.5M real-world examinations** and **17.7M images**, covering multiple organs and paired with uncurated clinical reports. We then fine-tune a standard LVLM using **LoRA** without task-specific architectural modifications.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+Despite its simplicity, this recipe achieves strong performance across diverse ultrasound understanding tasks and outperforms prior methods that rely on more complex pipelines. We further provide model and data scaling analyses to better understand the role of scale in ultrasound LVLMs.
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+## Project Page
 
-## What's New
+The project page includes:
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
-
-## Components
-
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
+- Paper information
+- Abstract
+- Project video
 - BibTeX citation
 
-## Customization
+After deployment with GitHub Pages, the website will be available at:
 
-The HTML file has TODO comments showing what to replace:
+```text
+https://<your-github-username>.github.io/<repository-name>/
+```
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+## Repository Structure
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+```text
+.
+├── index.html              # Main project page
+├── README.md               # Repository description
+└── static/
+    ├── css/
+    │   └── index.css       # Page styling
+    ├── images/
+    │   └── LOGO.png     # Website favicon
+    └── videos/             # Optional local videos
+```
 
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
+## Paper
 
-## Tips
+```text
+Towards Real-World Ultrasound Understanding:
+Large Vision-Language Models from Multi-Image Examinations with Long-Form Reports
+```
 
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+arXiv link:
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+```text
+https://arxiv.org/abs/XXXX.XXXXX
+```
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Please replace the placeholder arXiv identifier after the paper is online.
+
+## Video
+
+The project page currently embeds the following YouTube video:
+
+```text
+https://www.youtube.com/embed/JkaxUblCGz0
+```
+
+## Dataset and Model Availability
+
+The dataset used in this work consists of real-world clinical ultrasound examinations and reports. Due to patient privacy, data governance, and clinical compliance requirements, the raw clinical data are not directly released in this repository.
+
+Model checkpoints, code, or additional resources may be released separately when available.
+
+## Citation
+
+```bibtex
+@article{ultrasound_lvlm_2026,
+  title   = {Towards Real-World Ultrasound Understanding: Large Vision-Language Models from Multi-Image Examinations with Long-Form Reports},
+  author  = {Team},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}
+```
+
+Please update the author list and arXiv identifier after the official paper release.
+
+## License
+
+This repository is intended for hosting the academic project page. Please update this section with the appropriate license before public release.
