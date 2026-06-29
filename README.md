@@ -1,6 +1,6 @@
-# Towards Real-World Ultrasound Understanding
+# LUMI
 
-**Large Vision-Language Models from Multi-Image Examinations with Long-Form Reports**
+**Towards Real-World Ultrasound Understanding Large Vision-Language Models from Multi-Image Examinations with Long-Form Reports**
 
 This repository contains the project page for our work on real-world ultrasound understanding with large vision-language models (LVLMs).
 
